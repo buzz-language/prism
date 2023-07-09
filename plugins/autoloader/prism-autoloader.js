@@ -92,6 +92,7 @@
 		"less": "css",
 		"lilypond": "scheme",
 		"liquid": "markup-templating",
+		"buzz": "regex",
 		"markdown": "markup",
 		"markup-templating": "markup",
 		"mongodb": "javascript",

@@ -883,6 +883,11 @@
 			"title": "Lua",
 			"owner": "Golmote"
 		},
+		"buzz": {
+			"title": "buzz",
+			"owner": "giann",
+			"require": "regex"
+		},
 		"magma": {
 			"title": "Magma (CAS)",
 			"owner": "RunDevelopment"
