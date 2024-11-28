@@ -17,7 +17,7 @@ Prism.languages.buzz = {
 		inside: Prism.languages.regex
 	},
 	keyword:
-		/\b(?:typeof|type|zdef|static|extern|import|export|from|test|as|in|while|if|else|fun|try|catch|throw|constructor|return|switch|default|break|for|foreach|do|until|continue|resolve|resume|yield|any|out|var|const|and|or|!|\?\?|enum|object|protocol|ud|str|int|float|obj|fib|bool|pat|type|any|rg|void|namespace|is)\b/,
+		/\b(?:typeof|type|zdef|static|extern|import|export|from|test|as|in|while|if|else|fun|try|catch|throw|constructor|return|switch|default|break|for|foreach|do|until|continue|resolve|resume|yield|any|out|var|final|and|or|!|\?\?|enum|object|protocol|ud|str|int|float|obj|fib|bool|pat|type|any|rg|void|namespace|is)\b/,
 
 	function: /\b[a-z_]\w*(?=\s*\()/i,
 	'class-name': /\b[A-Z](?:[A-Z_\d]*[a-z]\w*)?\b/,
