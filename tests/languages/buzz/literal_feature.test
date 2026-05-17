@@ -1,0 +1,66 @@
+#!/usr/bin/env buzz
+/// A doc comment.
+/// Continued on the next line.
+// A regular comment.
+
+123 100_000 3.1_4 0b1_0001 0xF_FFF
+
+'A' '\'' '\\' '\n' '\0' '\a' '\b' '\f' '\r' '\t' '\v' '\"'
+
+$"hello ([a-z]+)" $"hello \" world"
+
+----------------------------------------------------
+
+[
+	["hashbang", "#!/usr/bin/env buzz"],
+	["doc-comment", "/// A doc comment.\r\n/// Continued on the next line."],
+	["comment", "// A regular comment."],
+
+	["number", "123"],
+	["number", "100_000"],
+	["number", "3.1_4"],
+	["number", "0b1_0001"],
+	["number", "0xF_FFF"],
+
+	["char", "'A'"],
+	["char", "'\\''"],
+	["char", "'\\\\'"],
+	["char", "'\\n'"],
+	["char", "'\\0'"],
+	["char", "'\\a'"],
+	["char", "'\\b'"],
+	["char", "'\\f'"],
+	["char", "'\\r'"],
+	["char", "'\\t'"],
+	["char", "'\\v'"],
+	["char", "'\\\"'"],
+
+	["pattern", [
+		["regex-delimiter", "$\""],
+		["regex-source", [
+			"hello ",
+			["group", ["("]],
+			["char-class", [
+				["char-class-punctuation", "["],
+				["range", [
+					"a",
+					["range-punctuation", "-"],
+					"z"
+				]],
+				["char-class-punctuation", "]"]
+			]],
+			["quantifier", "+"],
+			["group", ")"]
+		]],
+		["regex-delimiter", "\""]
+	]],
+	["pattern", [
+		["regex-delimiter", "$\""],
+		["regex-source", [
+			"hello ",
+			["escape", "\\\""],
+			" world"
+		]],
+		["regex-delimiter", "\""]
+	]]
+]

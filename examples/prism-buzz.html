@@ -1,0 +1,50 @@
+<h2>Full Example</h2>
+<pre><code>namespace app\demo;
+
+import "std";
+
+/// A generic payload container.
+object Payload::&lt;T&gt; {
+    data: [T],
+
+    static fun init(data: [T]) &gt; Payload::&lt;T&gt; {
+        return Payload::&lt;T&gt;{ data = data };
+    }
+}
+
+protocol Nameable {
+    mut fun rename(name: str) &gt; void;
+}
+
+enum&lt;str&gt; Direction {
+    north,
+    south,
+}
+
+fun count::&lt;T&gt;(items: [T]) &gt; int {
+    return items.len();
+}
+
+test "buzz syntax" {
+    final payload = Payload::&lt;int&gt;{ data = [1, 2, 3] };
+    var total = 0;
+
+    foreach (index, value in payload.data): values {
+        total += index + value;
+    }
+
+    final greeting = "total: {total}";
+    final lines = `hello
+{greeting}`;
+    final pattern = $"total: \d+";
+    final bucket = match (total) {
+        0..5 -> "small",
+        6, 7, 8 -> "medium",
+        else -> "large",
+    };
+
+    std\assert(count::&lt;int&gt;(payload.data) == 3, message: greeting);
+    _ = Direction.north.value as? str;
+    _ = bucket;
+    _ = pattern.match(lines);
+}</code></pre>

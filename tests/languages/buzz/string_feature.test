@@ -1,0 +1,85 @@
+"hello"
+"escaped \{name} {name} {3 + 4}"
+"{"$"} hello {name} i'm {age} years old"
+
+`multiline
+{name}
+{items[0].label}
+`
+
+----------------------------------------------------
+
+[
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "hello"],
+		["string-punctuation", "\""]
+	]],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "escaped \\{name} "],
+		["interpolation", [
+			["interpolation-punctuation", "{"],
+			"name",
+			["interpolation-punctuation", "}"]
+		]],
+		["string", " "],
+		["interpolation", [
+			["interpolation-punctuation", "{"],
+			["number", "3"],
+			["operator", "+"],
+			["number", "4"],
+			["interpolation-punctuation", "}"]
+		]],
+		["string-punctuation", "\""]
+	]],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["interpolation", [
+			["interpolation-punctuation", "{"],
+			["string-literal", [
+				["string-punctuation", "\""],
+				["string", "$"],
+				["string-punctuation", "\""]
+			]],
+			["interpolation-punctuation", "}"]
+		]],
+		["string", " hello "],
+		["interpolation", [
+			["interpolation-punctuation", "{"],
+			"name",
+			["interpolation-punctuation", "}"]
+		]],
+		["string", " i'm "],
+		["interpolation", [
+			["interpolation-punctuation", "{"],
+			"age",
+			["interpolation-punctuation", "}"]
+		]],
+		["string", " years old"],
+		["string-punctuation", "\""]
+	]],
+
+	["string-literal", [
+		["string-punctuation", "`"],
+		["string", "multiline\r\n"],
+		["interpolation", [
+			["interpolation-punctuation", "{"],
+			"name",
+			["interpolation-punctuation", "}"]
+		]],
+		["string", "\r\n"],
+		["interpolation", [
+			["interpolation-punctuation", "{"],
+			"items",
+			["punctuation", "["],
+			["number", "0"],
+			["punctuation", "]"],
+			["punctuation", "."],
+			"label",
+			["interpolation-punctuation", "}"]
+		]],
+		["string", "\r\n"],
+		["string-punctuation", "`"]
+	]]
+]

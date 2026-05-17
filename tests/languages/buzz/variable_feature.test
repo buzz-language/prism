@@ -1,0 +1,32 @@
+var myvar = 1;
+final another_var = myvar;
+var @"quoted-identifier" = 2;
+final @"quoted-final" = @"quoted-identifier";
+
+----------------------------------------------------
+
+[
+	["keyword", "var"],
+	["variable", "myvar"],
+	["operator", "="],
+	["number", "1"],
+	["punctuation", ";"],
+
+	["keyword", "final"],
+	["variable", "another_var"],
+	["operator", "="],
+	" myvar",
+	["punctuation", ";"],
+
+	["keyword", "var"],
+	["variable", "@\"quoted-identifier\""],
+	["operator", "="],
+	["number", "2"],
+	["punctuation", ";"],
+
+	["keyword", "final"],
+	["variable", "@\"quoted-final\""],
+	["operator", "="],
+	["quoted-identifier", "@\"quoted-identifier\""],
+	["punctuation", ";"]
+]

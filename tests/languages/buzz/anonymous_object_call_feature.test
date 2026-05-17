@@ -1,0 +1,52 @@
+callMe(.{ data = "..." });
+callMe .{ data = "..." };
+callMe::<Payload> .{ data = "..." };
+
+----------------------------------------------------
+
+[
+	["function", "callMe"],
+	["punctuation", "("],
+	["punctuation", "."],
+	["punctuation", "{"],
+	" data ",
+	["operator", "="],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "..."],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", "}"],
+	["punctuation", ")"],
+	["punctuation", ";"],
+
+	["function", "callMe"],
+	["punctuation", "."],
+	["punctuation", "{"],
+	" data ",
+	["operator", "="],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "..."],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", "}"],
+	["punctuation", ";"],
+
+	["function", "callMe"],
+	["operator", "::"],
+	["operator", "<"],
+	["class-name", "Payload"],
+	["operator", ">"],
+	["punctuation", "."],
+	["punctuation", "{"],
+	" data ",
+	["operator", "="],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "..."],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", "}"],
+	["punctuation", ";"]
+]

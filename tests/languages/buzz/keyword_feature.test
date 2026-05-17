@@ -1,0 +1,73 @@
+and any as as? bool break catch continue do double else enum export extern fib final
+for foreach from fun; if import in int is match mut namespace obj object or out
+pat protocol resolve resume return rg static str test throw try type typeof ud
+until var void while yield zdef true false null this
+
+float switch default Function
+
+----------------------------------------------------
+
+[
+	["keyword", "and"],
+	["keyword", "any"],
+	["keyword", "as"],
+	["keyword", "as?"],
+	["keyword", "bool"],
+	["keyword", "break"],
+	["keyword", "catch"],
+	["keyword", "continue"],
+	["keyword", "do"],
+	["keyword", "double"],
+	["keyword", "else"],
+	["keyword", "enum"],
+	["keyword", "export"],
+	["keyword", "extern"],
+	["keyword", "fib"],
+	["keyword", "final"],
+
+	["keyword", "for"],
+	["keyword", "foreach"],
+	["keyword", "from"],
+	["keyword", "fun"],
+	["punctuation", ";"],
+	["keyword", "if"],
+	["keyword", "import"],
+	["keyword", "in"],
+	["keyword", "int"],
+	["keyword", "is"],
+	["keyword", "match"],
+	["keyword", "mut"],
+	["keyword", "namespace"],
+	["keyword", "obj"],
+	["keyword", "object"],
+	["keyword", "or"],
+	["keyword", "out"],
+
+	["keyword", "pat"],
+	["keyword", "protocol"],
+	["keyword", "resolve"],
+	["keyword", "resume"],
+	["keyword", "return"],
+	["keyword", "rg"],
+	["keyword", "static"],
+	["keyword", "str"],
+	["keyword", "test"],
+	["keyword", "throw"],
+	["keyword", "try"],
+	["keyword", "type"],
+	["keyword", "typeof"],
+	["keyword", "ud"],
+
+	["keyword", "until"],
+	["keyword", "var"],
+	["keyword", "void"],
+	["keyword", "while"],
+	["keyword", "yield"],
+	["keyword", "zdef"],
+	["boolean", "true"],
+	["boolean", "false"],
+	["null", "null"],
+	["this", "this"],
+
+	"\r\n\r\nfloat switch default ", ["class-name", "Function"]
+]

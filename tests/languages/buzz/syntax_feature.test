@@ -1,0 +1,263 @@
+namespace app\demo;
+
+import "std";
+import foo, bar from "mod" as app\mod;
+
+object Payload::<T> {
+    data: [T],
+
+    static fun init(data: [T]) > Payload::<T> {
+        return Payload::<T>{ data = data };
+    }
+}
+
+protocol Nameable {
+    mut fun rename(name: str) > void;
+}
+
+enum<str> Direction {
+    north,
+    south,
+}
+
+fun count::<T>(list: [T]) > int {
+    return list.len();
+}
+
+test "sample" {
+    final payload = Payload::<int>{ data = [1, 2, 3] };
+    var total = 0;
+
+    foreach (index, value in payload.data): values {
+        total += index + value;
+    }
+
+    _ = total ?? 0;
+    _ = Direction.north.value as? str;
+}
+
+----------------------------------------------------
+
+[
+	["keyword", "namespace"],
+	["namespace", [
+		"app",
+		["punctuation", "\\"],
+		"demo"
+	]],
+	["punctuation", ";"],
+
+	["keyword", "import"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "std"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ";"],
+
+	["keyword", "import"],
+	" foo",
+	["punctuation", ","],
+	" bar ",
+	["keyword", "from"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "mod"],
+		["string-punctuation", "\""]
+	]],
+	["keyword", "as"],
+	["namespace", [
+		"app",
+		["punctuation", "\\"],
+		"mod"
+	]],
+	["punctuation", ";"],
+
+	["keyword", "object"],
+	["class-name", "Payload"],
+	["operator", "::"],
+	["operator", "<"],
+	["class-name", "T"],
+	["operator", ">"],
+	["punctuation", "{"],
+
+	"\r\n    data",
+	["punctuation", ":"],
+	["punctuation", "["],
+	["class-name", "T"],
+	["punctuation", "]"],
+	["punctuation", ","],
+
+	["keyword", "static"],
+	["keyword", "fun"],
+	["function-definition", "init"],
+	["punctuation", "("],
+	"data",
+	["punctuation", ":"],
+	["punctuation", "["],
+	["class-name", "T"],
+	["punctuation", "]"],
+	["punctuation", ")"],
+	["operator", ">"],
+	["class-name", "Payload"],
+	["operator", "::"],
+	["operator", "<"],
+	["class-name", "T"],
+	["operator", ">"],
+	["punctuation", "{"],
+
+	["keyword", "return"],
+	["class-name", "Payload"],
+	["operator", "::"],
+	["operator", "<"],
+	["class-name", "T"],
+	["operator", ">"],
+	["punctuation", "{"],
+	" data ",
+	["operator", "="],
+	" data ",
+	["punctuation", "}"],
+	["punctuation", ";"],
+
+	["punctuation", "}"],
+
+	["punctuation", "}"],
+
+	["keyword", "protocol"],
+	["class-name", "Nameable"],
+	["punctuation", "{"],
+
+	["keyword", "mut"],
+	["keyword", "fun"],
+	["function-definition", "rename"],
+	["punctuation", "("],
+	"name",
+	["punctuation", ":"],
+	["keyword", "str"],
+	["punctuation", ")"],
+	["operator", ">"],
+	["keyword", "void"],
+	["punctuation", ";"],
+
+	["punctuation", "}"],
+
+	["keyword", "enum"],
+	["operator", "<"],
+	["keyword", "str"],
+	["operator", ">"],
+	["class-name", "Direction"],
+	["punctuation", "{"],
+
+	"\r\n    north",
+	["punctuation", ","],
+
+	"\r\n    south",
+	["punctuation", ","],
+
+	["punctuation", "}"],
+
+	["keyword", "fun"],
+	["function-definition", "count"],
+	["operator", "::"],
+	["operator", "<"],
+	["class-name", "T"],
+	["operator", ">"],
+	["punctuation", "("],
+	"list",
+	["punctuation", ":"],
+	["punctuation", "["],
+	["class-name", "T"],
+	["punctuation", "]"],
+	["punctuation", ")"],
+	["operator", ">"],
+	["keyword", "int"],
+	["punctuation", "{"],
+
+	["keyword", "return"],
+	" list",
+	["punctuation", "."],
+	["function", "len"],
+	["punctuation", "("],
+	["punctuation", ")"],
+	["punctuation", ";"],
+
+	["punctuation", "}"],
+
+	["keyword", "test"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "sample"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", "{"],
+
+	["keyword", "final"],
+	["variable", "payload"],
+	["operator", "="],
+	["class-name", "Payload"],
+	["operator", "::"],
+	["operator", "<"],
+	["keyword", "int"],
+	["operator", ">"],
+	["punctuation", "{"],
+	" data ",
+	["operator", "="],
+	["punctuation", "["],
+	["number", "1"],
+	["punctuation", ","],
+	["number", "2"],
+	["punctuation", ","],
+	["number", "3"],
+	["punctuation", "]"],
+	["punctuation", "}"],
+	["punctuation", ";"],
+
+	["keyword", "var"],
+	["variable", "total"],
+	["operator", "="],
+	["number", "0"],
+	["punctuation", ";"],
+
+	["keyword", "foreach"],
+	["punctuation", "("],
+	"index",
+	["punctuation", ","],
+	" value ",
+	["keyword", "in"],
+	" payload",
+	["punctuation", "."],
+	"data",
+	["punctuation", ")"],
+	["punctuation", ":"],
+	" values ",
+	["punctuation", "{"],
+
+	"\r\n        total ",
+	["operator", "+="],
+	" index ",
+	["operator", "+"],
+	" value",
+	["punctuation", ";"],
+
+	["punctuation", "}"],
+
+	"\r\n\r\n    _ ",
+	["operator", "="],
+	" total ",
+	["operator", "??"],
+	["number", "0"],
+	["punctuation", ";"],
+
+	"\r\n    _ ",
+	["operator", "="],
+	["class-name", "Direction"],
+	["punctuation", "."],
+	"north",
+	["punctuation", "."],
+	"value ",
+	["keyword", "as?"],
+	["keyword", "str"],
+	["punctuation", ";"],
+
+	["punctuation", "}"]
+]

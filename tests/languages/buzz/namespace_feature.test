@@ -1,0 +1,55 @@
+namespace one\two\three;
+
+one\two\three\
+one\two\three\call();
+std\parseInt("1");
+
+----------------------------------------------------
+
+[
+	["keyword", "namespace"],
+	["namespace", [
+		"one",
+		["punctuation", "\\"],
+		"two",
+		["punctuation", "\\"],
+		"three"
+	]],
+	["punctuation", ";"],
+
+	["namespace", [
+		"one",
+		["punctuation", "\\"],
+		"two",
+		["punctuation", "\\"],
+		"three",
+		["punctuation", "\\"]
+	]],
+
+	["namespace", [
+		"one",
+		["punctuation", "\\"],
+		"two",
+		["punctuation", "\\"],
+		"three",
+		["punctuation", "\\"]
+	]],
+	["function", "call"],
+	["punctuation", "("],
+	["punctuation", ")"],
+	["punctuation", ";"],
+
+	["namespace", [
+		"std",
+		["punctuation", "\\"]
+	]],
+	["function", "parseInt"],
+	["punctuation", "("],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "1"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ")"],
+	["punctuation", ";"]
+]

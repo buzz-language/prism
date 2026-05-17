@@ -1,0 +1,124 @@
+match (value) {
+    1, 2 -> "selected",
+    3..5 -> "range",
+    $"hello [a-z]+" -> "pattern",
+    <MatchBox> -> "type",
+    else -> "other",
+}
+
+final result = match (value) {
+    MatchEnum.one -> "one",
+    MatchEnum.two -> "two"
+};
+
+----------------------------------------------------
+
+[
+	["keyword", "match"],
+	["punctuation", "("],
+	"value",
+	["punctuation", ")"],
+	["punctuation", "{"],
+
+	["number", "1"],
+	["punctuation", ","],
+	["number", "2"],
+	["operator", "->"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "selected"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ","],
+
+	["number", "3"],
+	["operator", ".."],
+	["number", "5"],
+	["operator", "->"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "range"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ","],
+
+	["pattern", [
+		["regex-delimiter", "$\""],
+		["regex-source", [
+			"hello ",
+			["char-class", [
+				["char-class-punctuation", "["],
+				["range", [
+					"a",
+					["range-punctuation", "-"],
+					"z"
+				]],
+				["char-class-punctuation", "]"]
+			]],
+			["quantifier", "+"]
+		]],
+		["regex-delimiter", "\""]
+	]],
+	["operator", "->"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "pattern"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ","],
+
+	["operator", "<"],
+	["class-name", "MatchBox"],
+	["operator", ">"],
+	["operator", "->"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "type"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ","],
+
+	["keyword", "else"],
+	["operator", "->"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "other"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ","],
+
+	["punctuation", "}"],
+
+	["keyword", "final"],
+	["variable", "result"],
+	["operator", "="],
+	["keyword", "match"],
+	["punctuation", "("],
+	"value",
+	["punctuation", ")"],
+	["punctuation", "{"],
+
+	["class-name", "MatchEnum"],
+	["punctuation", "."],
+	"one ",
+	["operator", "->"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "one"],
+		["string-punctuation", "\""]
+	]],
+	["punctuation", ","],
+
+	["class-name", "MatchEnum"],
+	["punctuation", "."],
+	"two ",
+	["operator", "->"],
+	["string-literal", [
+		["string-punctuation", "\""],
+		["string", "two"],
+		["string-punctuation", "\""]
+	]],
+
+	["punctuation", "}"],
+	["punctuation", ";"]
+]
